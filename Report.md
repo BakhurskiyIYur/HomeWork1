@@ -1,4 +1,4 @@
-# HomeWork1
+# Домашнее задание №1
 
 <img src="pic/1.jpg" align="left" />
 
