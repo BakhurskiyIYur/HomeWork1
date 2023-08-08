@@ -10,9 +10,12 @@
 * добавить свой ssh ключ в metadata ВМ
 * зайти удаленным ssh (первая сессия), не забывайте про ssh-add
 * поставить PostgreSQL
+  > результат: <img src="pic/2.jpg" align="left" />
 * зайти вторым ssh (вторая сессия)
 * запустить везде psql из под пользователя postgres
 * выключить auto commit
+  > результат:
+  > <img src="pic/3.jpg" align="left" />                                   
 * сделать в первой сессии новую таблицу и наполнить ее данными
   create table persons(id serial, first_name text, second_name text);
   insert into persons(first_name, second_name) values('ivan', 'ivanov'); 
@@ -27,7 +30,7 @@
 * завершить первую транзакцию - commit;
 * сделать select * from persons во второй сессии 
 * видите ли вы новую запись и если да то почему?
-**_Да, появилась новая запись. Неповторяющееся чтение при уровне изоляции Read Committed. _**
+**_Да, появилась новая запись. Неповторяющееся чтение при уровне изоляции Read Committed._**
 * завершите транзакцию во второй сессии
 * начать новые но уже repeatable read транзации - set transaction isolation level repeatable read;
 * в первой сессии добавить новую запись insert into persons(first_name, second_name) values('sveta', 'svetova');
