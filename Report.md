@@ -5,17 +5,16 @@
 
 * создать новый проект в Google Cloud Platform, Яндекс облако или на любых ВМ, докере
 * далее создать инстанс виртуальной машины с дефолтными параметрами
-  > результат: <img src="pic/1.jpg" align="left" />
+  > результат: <img src="pic/1.jpg" align="center" />
 
 * добавить свой ssh ключ в metadata ВМ
 * зайти удаленным ssh (первая сессия), не забывайте про ssh-add
 * поставить PostgreSQL
-  > результат: <img src="pic/2.jpg" align="left" />
+  > результат: <img src="pic/2.jpg" align="center" />
 * зайти вторым ssh (вторая сессия)
 * запустить везде psql из под пользователя postgres
 * выключить auto commit
-  > результат:
-  > <img src="pic/3.jpg" align="left" />                                   
+  > результат: <img src="pic/3.jpg" align="center" />                                  
 * сделать в первой сессии новую таблицу и наполнить ее данными
   create table persons(id serial, first_name text, second_name text);
   insert into persons(first_name, second_name) values('ivan', 'ivanov'); 
