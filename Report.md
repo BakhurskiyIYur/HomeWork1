@@ -16,11 +16,14 @@
 * выключить auto commit
   > результат: <img src="pic/3.jpg" align="center" />                                  
 * сделать в первой сессии новую таблицу и наполнить ее данными
-  create table persons(id serial, first_name text, second_name text);
-  insert into persons(first_name, second_name) values('ivan', 'ivanov'); 
-  insert into persons(first_name, second_name) values('petr', 'petrov'); 
-  commit;
-* посмотреть текущий уровень изоляции: show transaction isolation level
+  * create table persons(id serial, first_name text, second_name text);
+  * insert into persons(first_name, second_name) values('ivan', 'ivanov'); 
+  * insert into persons(first_name, second_name) values('petr', 'petrov'); 
+  * commit;
+  > результат: <img src="pic/4.jpg" align="center" />  
+* посмотреть текущий уровень изоляции
+  * show transaction isolation level;
+  > результат: <img src="pic/5.jpg" align="center" />  
 * начать новую транзакцию в обоих сессиях с дефолтным (не меняя) уровнем изоляции
 * в первой сессии добавить новую запись insert into persons(first_name, second_name) values('sergey', 'sergeev');
 * сделать select * from persons во второй сессии
